@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>연습문제6</title>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <form action="test.do">
+        <fieldset>
+            <fieldset>
+                <legend>
+                    필수 입력 사항
+                </legend>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>ID</b> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="id"  placeholder="아이디 10 글자 이내" > <input type="submit" value="중복 확인"> <br>
+                &nbsp&nbsp <b>비밀번호</b> &nbsp&nbsp&nbsp<input type="text" name="pwd"  placeholder="영문,숫자,특수문자 포함 8자 이상" >  <br> 
+               
+                <b>비밀번호확인</b> <input type="text" name="pwdcheck"  > <br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp<b>Email</b>&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="eamil"  > 
+                <select name="domain" >
+                <option value="do1">daum.net</option>
+                <option value="do2">naver.com</option>
+                <option value="do3">nate.com</option>
+            </select>
+            
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>
+                    추가 정보
+                </legend>
+                프로필사진 : <input type="file" name="file"> 
+                <br><br>
+                성별 : <input type="radio" id="M" name="gender">
+                        <label for="M">남자</label>
+                <input type="radio" id="F" name="gender">
+                <label for="F">여자</label>
+                <BR></BR>
+                
+                생년월일 : <input type="date" name="date">
+                <br>
+                취미 <br>
+                <input type="checkbox" name="exer" value="야구" >야구<input type="checkbox" name="exer" value="농구">농구<input type="checkbox" name="exer" value="축구">축구<br>
+                <input type="checkbox" name="exer" value="공부">공부<input type="checkbox" name="exer" value="음악감상">음악감상<br>
+                <input type="checkbox" name="exer" > 기타 : <input type="text">
+
+                <br><br>
+                자기소개<br>
+                <textarea name="self" id="" cols="30" rows="3" style="resize: none;"  ></textarea>
+            
+            
+            </fieldset>
+            <br>
+
+            <input type="submit" value="회원가입">
+            <input type="reset" value="다시입력">
+            <input type="button" value="이전으로"> 
+            
+
+
+
+            
+        </fieldset>
+    </form>
+    
+</body>
+</html>

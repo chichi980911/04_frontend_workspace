@@ -7,22 +7,25 @@
     <title>표관련태그</title>
     <style>
         /*css 영역에서의 주석 */
-        thead{
+        thead {
             background-color: magenta;
             color: white;
         }
-        tfoot{
+
+        tfoot {
             background-color: darkgreen;
             color: yellow;
         }
-        #tt{
+
+        #tt {
             background-color: lightgray;
             color: blue;
         }
-        button{
+
+        button {
             background-color: pink;
         }
-    </style>  
+    </style>
 </head>
 
 <body>
@@ -68,21 +71,21 @@
 
 
 -->
-<h1>기본적인 표 만들기</h1>
-    <table border="1"  >
+    <h1>기본적인 표 만들기</h1>
+    <table border="1">
         <!-- border 속성 : 표의 테투리의 두께 -->
-       
+
         <!-- 테이블의 제목을 추가하는태그 -->
         <caption><b>웹 브라우저의 종류</b></caption>
-        
+
         <tr>
-            <th width = "120" height = "50">
+            <th width="120" height="50">
                 브라우저명
             </th>
-            <th width = "80" >
+            <th width="80">
                 제조사
             </th>
-            <th width = "300">
+            <th width="300">
                 홈페이지
             </th>
         </tr>
@@ -122,87 +125,104 @@
     </table>
     <figure>
         <figcaption>
-            테이블의 설명 또는 img의 설명을 표현할 떄 주로 사용 
+            테이블의 설명 또는 img의 설명을 표현할 떄 주로 사용
         </figcaption>
     </figure>
-        <hr>
-        <h1>표의 행과 열을 합치는 속성</h1>
-        <!-- 셀(th,td) 태그의 속성을 이용해서 행 또는 열을 합칠 수 있음
+    <hr>
+    <h1>표의 행과 열을 합치는 속성</h1>
+    <!-- 셀(th,td) 태그의 속성을 이용해서 행 또는 열을 합칠 수 있음
             colspan ="2" : 2개의 열을 합치기
             rowspan ="2" : 2개의 행 합치기       -->
 
-            <h3>
-                이력서
-            </h3>
+    <h3>
+        이력서
+    </h3>
 
-            <table border="1" >
-                <tbody >
-                <tr>
-                    <td colspan="2" rowspan="2" width="130" height ="130">사진</td>
-                    <td width="80">이름</td>
-                    <td width="200"></td>
-                </tr>
-                <tr>
-                    <td>연락처</td>
-                    <td></td>
-                </tr>
-                <tr >
-                    <td width="70" height = "50">주소 </td>
-                    <td colspan="3"></td>
-                    
-                </tr>
-                <tr >
-                    <td height ="130">자기소개</td>
-                    <td colspan="3"></td>
-                </tr>
-                </tbody>
-            </table>
+    <table border="1">
+        <tbody>
+            <tr>
+                <td colspan="2" rowspan="2" width="130" height="130">사진</td>
+                <td width="80">이름</td>
+                <td width="200"></td>
+            </tr>
+            <tr>
+                <td>연락처</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td width="70" height="50">주소 </td>
+                <td colspan="3"></td>
 
-            <hr>
+            </tr>
+            <tr>
+                <td height="130">자기소개</td>
+                <td colspan="3"></td>
+            </tr>
+        </tbody>
+    </table>
 
-            <h1>테이블 내에 구조 나누기</h1>
-            
-            <table border="1">
-                <thead>
-                     
-                    <tr >
-                        <th width="130" height ="30">이름</th>
-                        <th width="130" >나이</th>
-                        <th width="130" >주소</th>
-                    </tr>
-                </thead>
-                <tbody  id ="tt">
-                    <tr>
-                        <td >차은우</td>
-                        <td>23</td>
-                        <td><button>서울</button></td>
-                    </tr>
-                    <tr>
-                        <td>주지훈</td>
-                        <td>30</td>
-                        <td>부산</td>
-                       
-                    </tr>
-                    <tr>
-                        <td>아이유</td>
-                        <td>22</td>
-                        <td>광주</td>
-                       
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th colspan="2">총인원</th>
-                        <td>3명</td>
-                    </tr>
-                </tfoot>
+    <hr>
+
+    <h1>테이블 내에 구조 나누기</h1>
+
+    <table border="1">
+        <thead>
+
+            <tr>
+                <th width="130" height="30">이름</th>
+                <th width="130">나이</th>
+                <th width="130">주소</th>
+            </tr>
+        </thead>
+        <tbody id="tt">
+            <tr>
+                <td>차은우</td>
+                <td>23</td>
+                <td><button>서울</button></td>
+            </tr>
+            <tr>
+                <td>주지훈</td>
+                <td>30</td>
+                <td>부산</td>
+
+            </tr>
+            <tr>
+                <td>아이유</td>
+                <td>22</td>
+                <td>광주</td>
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">총인원</th>
+                <td>3명</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+   <br><br><br><b><br>
+    <table border="1">
+        <tbody>
+            <tr>
+                <td rowspan="3" width="30" height="30">td</td>
+                <td width="30" height="30">td</td>
+            </tr>
+            <tr>
                 
-            </table>
+                <td width="30" height="30">td</td>
+            </tr>
+            <tr>
+
+                <td width="30" height="30">td</td>
+            </tr>
+        </tbody>
+    </table>>
+    
 
 
 
-
- 
 
     <tr></tr>
     <td></td>

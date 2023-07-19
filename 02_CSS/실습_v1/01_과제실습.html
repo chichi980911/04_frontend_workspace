@@ -17,28 +17,77 @@
         .wrap>div {
             width: 100%;
         }
+        
         #header{height: 20%;}
         #navigator{height: 4%}
         #content{height: 70%;}
         #footer{height: 6%;}
+        #header>div{ height: 100%; float:left; }
 
-        #header_1 , #header_2{width: 20%;}
-        #heaader_3{width:60%;}
+        #header_1 , #header_3{width: 20%;}
+        #header_2{width:60%; display: flex; justify-content: center;}
+
+        #content_1{width: 15%;}
+        #content_2{width: 65%;}
+        #content_3{width: 20%;}
+        
+        #navigator{background-color: rgb(161, 219, 73);
+                font-size: 18px;
+                }
+        #navi>li>a{
+            color: white;
+        }
+        #navi{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+        #navi>li{
+            float: left;
+            width: 25%;
+            height: 100%;
+            text-align: center;
+        }
+        
+        #content>div{height: 100%;
+        float: left;}
+
+        #content_2>div{height: 50%; width: 50%; float: left;
+        text-align: center;
+         }
+
+
 
     </style>
 </head>
 <body>
+    <br><br>
     <div class="wrap">
         <div id="header">
-            <div id="header_1"></div>
-            <div id="header_2"></div>
+            <div id="header_1"> <img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\logo.jpg" width="100%"></div>
+            <div id="header_2"> <img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\mainlogo.jpg" width="100%"></div>
             <div id="header_3"></div>
         </div>
-        <div id="navigator"> </div>
+        <div id="navigator">
+            <ul id="navi">
+                <li><a href="">Home</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Board</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
         <div id="content">
-            <div id="content_1"></div>
-            <div id="content_2"></div>
-            <div id="content_3"></div>
+            <div id="content_1"><img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\left_img.jpg" width="100%" alt=""> </div>
+            <div id="content_2">
+                <div id="img1"><img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\main_img1.jpg" alt="">나무를 심는 사람들</div>
+                <div id="img2"><img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\main_img2.jpg" alt="">아이들에게 녹색미래를</div>
+                <div id="img3"><img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\main_img3.jpg" alt="">설악산을 살리는 길</div>
+                <div id="img4"><img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\main_img4.jpg" alt="">사라지는 북극곰들</div>
+            </div>
+            <div id="content_3">
+                
+            </div>
         </div>
         <div id="footer">
            

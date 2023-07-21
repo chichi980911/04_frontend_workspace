@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid red;
+            box-sizing: border-box;
+            
+        }
+       .wrap{
+        width: 1200px;
+        height: 800px;
+        margin: auto;
+       } 
+       .wrap>div{
+        width: 100%;
+       }
+       
+       #header ,#body1 , #footer{height: 20%;}
+       #navigator,#spk{height: 5%;}
+       #body2{height: 30%;}
+
+       #head1,#head3{width: 30%;}
+       #head2{width: 40%;}
+       #header>* {height: 100%; float: left;}
+
+       #navi>li{float: left;
+            border: 1px ;    
+            width: 20%;
+            height: 100%;
+            text-align: center;}
+
+
+       #body1_1{width: 75%;}
+       #login_form{width: 35%;}
+       
+       #body1>*{height: 100%; float: left;}
+       #body1_1{width: 75%;}
+       #login_form{width: 25%;}
+       
+       #spk>*{float: left;}
+
+       #spk1{width: 75%;}
+
+       #sp1{width: 25%;}
+       #body2{width: 75%;}
+       #footer{}
+
+
+
+       
+       
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="header">
+            <div id="head1">1</div>
+            <div id="head2">2</div>
+            <div id="head3">3</div>
+        </div>
+        <div id="navigator">
+            <ul id="navi">
+                <li><a href="#">교육과정</a></li>
+                <li><a href="#">교육원소개</a></li>
+                <li><a href="#">취업지원센터</a></li>
+                <li><a href="#">산학연계</a></li>
+                <li><a href="#">상담센터</a></li>
+            </ul>
+        </div>
+        <div id="body1">
+            <div id="body1_1"></div>
+            <div id="login_form"></div>
+        </div>
+        <div id="spk">
+            <div id="spk1"></div>
+            <div id="sp1"></div>
+        </div>
+        <div id="body2">
+
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+    
+</body>
+</html>

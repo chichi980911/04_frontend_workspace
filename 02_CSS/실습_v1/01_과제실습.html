@@ -7,14 +7,14 @@
     <title>Document</title>
     <style>
         div {
-            border: 1px solid red;
+            border: 1px;
             box-sizing: border-box;
         }
 
         .wrap {
 
             width: 1100px;
-            height: 800px;
+            height: 900px;
             margin: auto;
         }
 
@@ -134,29 +134,34 @@
             height: 70%;
             width: 100%;
         }
-        #login_form>*{
+        
+        #login_form>#login_form_input{
             width: 100%;
         }
         #login_form>#login_form_input{
             height: 80%;
         }
         #login_form>#login_form_etc{
-            height: 20%;
+            height: 30%;
+            text-align: center;
+
         }
         #login_form_input>div{
             height: 100%;
             float: left;
             
         }
-        #login_form_input>#login_form_id_pwd{
-            width: 65%;
+        
+        #login_form_input>#login_input_id_pwd{
+            width: 75%;
            
         }
+        
         #login_form_input>#login_input_btn{
-            width: 35%;
+            width: 25%;
         }
         #login_input_id_pwd>input {
-            width: 70%;
+            width: 100%;
             height: 50%;
             box-sizing: border-box;
         }
@@ -167,6 +172,19 @@
         #login_input_ect{
             text-align: center;
         }
+        #btn_size{width: 50px; height: 50px;}
+        #footer>*{display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            
+            /* div 요소의 크기 (예: 300px x 200px) */
+            
+            /* 테두리 스타일 설정 (선택 사항) */
+            }
+             #content2>div{}
+       
 
 
 
@@ -187,8 +205,8 @@
     <br><br>
     <div class="wrap">
         <div id="header">
-            <div id="header_1"> <img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\logo.jpg" width="100%"></div>
-            <div id="header_2"> <img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\mainlogo.jpg" width="100%"></div>
+            <div id="header_1"> <img src="/02_CSS/실습_v1/image/logo.jpg" width="100%"></div>
+            <div id="header_2"> <img src="/02_CSS/실습_v1/image/mainlogo.jpg" width="100%"></div>
             <div id="header_3"></div>
         </div>
         <div id="navigator">
@@ -200,16 +218,16 @@
             </ul>
         </div>
         <div id="content">
-            <div id="content_1"><img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\left_img.jpg" width="100%" alt="">
+            <div id="content_1"><img src="/02_CSS/실습_v1/image/left_img.jpg" width="100%" alt="">
             </div>
             <div id="content_2">
-                <div id="img1"><img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\main_img1.jpg" width="100%">나무를 심는
+                <div id="img1"><img src="/02_CSS/실습_v1/image/main_img1.jpg" width="100%" style="padding-right: 5px;">나무를 심는
                     사람들</div>
-                <div id="img2"><img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\main_img2.jpg" width="100%">아이들에게
+                <div id="img2"><img src="/02_CSS/실습_v1/image/main_img2.jpg" width="100%">아이들에게
                     녹색미래를</div>
-                <div id="img3"><img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\main_img3.jpg" width="100%">설악산을
+                <div id="img3"><img src="/02_CSS/실습_v1/image/main_img3.jpg" width="100%">설악산을
                     살리는 길</div>
-                <div id="img4"><img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\main_img4.jpg" width="100%">사라지는
+                <div id="img4"><img src="/02_CSS/실습_v1/image/main_img4.jpg" width="100%">사라지는
                     북극곰들</div>
             </div>
             <div id="content_3">
@@ -219,26 +237,28 @@
                         <form action="" id="login_form_input">
                             <div id="login_input_id_pwd">
                                 <input type="text" name="userId" placeholder="아이디를 입력하세요" required>
-                                <input type="password" name="userId" placeholder="비밀번호를 입력하세요" required>
+                                <input type="password" name="userpwd" placeholder="비밀번호를 입력하세요" required>
                             </div>
                             <div id="login_input_btn">
+                                
                                 <input type="submit" value="로그인">
+                            
                             </div>
                         </form>
 
                          <div id="login_form_etc">
-                            <a href="#">회원가입</a>
+                            <a href="#">회원가입</a>  &nbsp 
                             <a href="#">ID/PWD 찾기</a>
                         </div>
 
                     </div>
                 </div>
-                <div id="con2"> <img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\right_img.jpg" width="100%"></div>
-                <div id="con3"> <img src="C:\04_frontend_workspace\02_CSS\실습_v1\image\me_chat.jpg" width="100%"></div>
+                <div id="con2"> <img src="/02_CSS/실습_v1/image/right_img.jpg" style="width: 100%; height: 100%;"></div>
+                <div id="con3"> <img src="/02_CSS/실습_v1/image/me_chat.jpg" style="width: 100%; height: 100%;" ></div>
             </div>
         </div>
         <div id="footer">
-
+            <img src="/02_CSS/실습_v1/image/footer.JPG" >
 
 
         </div>

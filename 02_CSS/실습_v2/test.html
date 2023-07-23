@@ -1,68 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
-            border: 1px solid red;
+        div {
+            border: 1px ;
             box-sizing: border-box;
-            
+
         }
-       .wrap{
-        width: 1200px;
-        height: 800px;
-        margin: auto;
-       } 
-       .wrap>div{
-        width: 100%;
-       }
-       
-       #header ,#body1 , #footer{height: 20%;}
-       #navigator,#spk{height: 5%;}
-       #body2{height: 30%;}
+        .inner-div {
+     margin: 5px;
+     border: 0.1px solid gray;
+     }
 
-       #head1,#head3{width: 30%;}
-       #head2{width: 40%;}
-       #header>* {height: 100%; float: left;}
+        .wrap {
+            width: 1200px;
+            height: 900px;
 
-       #navi>li{float: left;
-            border: 1px ;    
+        }
+
+        .wrap>div {
+            width: 100%;
+        }
+
+        #header,
+        #body1,
+        #footer {
+            height: 15%;
+        }
+
+        #navigator {
+            height: 5%;
+        }
+
+        #content {
+            height: 50%;
+        }
+
+        #head1,
+        #head3 {
+            width: 20%;
+        }
+
+        #head2 {
+            width: 60%;
+        }
+
+        #header>* {
+            height: 100%;
+            float: left;
+            display: flex;
+            justify-content: center;
+            /* 가로 가운데 정렬 */
+            align-items: center;
+            /* 세로 가운데 정렬 */
+
+            height: 100%;
+        }
+
+        #navi>li {
+            list-style-type: none;
+
+            float: left;
+            border: 1px;
             width: 20%;
             height: 100%;
-            text-align: center;}
+            text-align: center;
+        }
+
+        li>a {
+            text-decoration: none;
+            text-align: center;
+        }
 
 
-       #body1_1{width: 75%;}
-       #login_form{width: 35%;}
-       
-       #body1>*{height: 100%; float: left;}
-       #body1_1{width: 75%;}
-       #login_form{width: 25%;}
-       
-       #spk>*{float: left;}
+        #body1_1 {
+            width: 75%;
+        }
 
-       #spk1{width: 75%;}
+        #login_form {
+            width: 35%;
+        }
 
-       #sp1{width: 25%;}
-       #body2{width: 75%;}
-       #footer{}
+        #body1>* {
+            height: 100%;
+            float: left;
+        }
 
 
 
-       
-       
+        #login_form {
+            width: 25%;
+        }
+
+        #content>* {
+            width: 100%;
+            height: 100%;
+            float: left;
+        }
+
+        #spkcar {
+            width: 75%;
+        }
+
+        #product {
+            width: 25%;
+        }
+
+        #spk {
+            height: 10%;
+        }
+
+        #car {
+            height: 90%;
+        }
+
+        #spkcar>div {
+            width: 100%;
+        }
+
+        #head1 {}
+
+
+
+        #footer {
+            width: 100%;
+        }
+
+        div,
+        form,
+        input {
+            box-sizing: border-box;
+        }
+
+        #head2 {
+            position: relative;
+        }
+
+        #search_form {
+            width: 70%;
+            height: 30%;
+        }
+
+        #search_form {
+            margin: auto;
+            position: absolute;
+            /*4개다 극단으로 가려고 해서 결국 가운데에 배치*/
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #search_form>div {
+            height: 100%;
+            float: left;
+        }
+
+        #search_text {
+            width: 80%;
+        }
+
+        #search_btn {
+            width: 20%;
+        }
+
+        #search_form input {
+            width: 100%;
+            height: 100%;
+        }
+
+        #search_btn button {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            /* 버튼 내부 여백 제거 */
+
+            background-color: transparent;
+            /* 배경색 투명하게 설정 */
+            background-image: url("/02_CSS/실습_v2/image/search.png");
+            /* 배경 이미지 설정 */
+            background-size: contain;
+            /* 배경 이미지가 버튼 안에 100% 비율로 표시되도록 설정 */
+            background-repeat: no-repeat;
+            /* 배경 이미지 반복 제거 */
+            background-position: center;
+            /* 배경 이미지 중앙 정렬 */
+        }
+
+        #body1_1>img {
+            object-fit: cover;
+            /* 이미지가 비율을 유지하면서 div 영역에 꽉차게 표시 */
+            object-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        #login_form>#login_form {
+            height: 70%;
+            width: 100%;
+        }
+
+        #login_form>#login_form_input {
+            width: 100%;
+        }
+
+        #login_form>#login_form_input {
+            height: 80%;
+        }
+
+        #login_form>#login_form_etc {
+            
+            height: 20%;
+            text-align: center;
+
+        }
+
+        #login_form_input>div {
+            height: 100%;
+            float: left;
+
+        }
+
+        #login_form_input>#login_input_id_pwd {
+            width: 75%;
+
+        }
+
+        #login_form_input>#login_input_btn {
+            width: 25%;
+        }
+
+        #login_input_id_pwd>input {
+            width: 100%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+
+        #login_input_btn>input {
+            width: 100%;
+            height: 100%;
+        }
+
+        #btn_size {
+            width: 50px;
+            height: 50px;
+        }
+
+        #login_form_etc {
+            text-align: center;
+        }
+        #login_form_etc>a {text-decoration: none;}
+        #car{ object-fit: cover;
+            /* 이미지가 비율을 유지하면서 div 영역에 꽉차게 표시 */
+            object-position: center;
+            
+            justify-content: center;
+            align-items: center;
+            height: 90%;
+        width: 100%;}
+        #product>img{    max-width: 100%; /* 이미지의 최대 너비를 div 영역의 너비에 맞게 설정 */
+    max-height: 100%; /* 이미지의 최대 높이를 div 영역의 높이에 맞게 설정 */
+    display: block; /* 이미지를 블록 레벨로 표시하여 div 영역에 꽉차게 나타남 */
+    margin: auto; 
+
+           
+            
+        }
+
+    #p1 {
+    height: 70%;
+    padding: 1px 15px;
+  }
+
+  #p2 {
+    height: 20%;
+    text-align: center;
+  }
+
+  #footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  #content {
+    display: flex;
+    gap: 10px;
+    
+    padding: 5px; /* 내부 요소들과의 간격을 위한 padding 설정 */
+  }
+ #body1 {
+    display: flex;
+    gap: 10px;
+  
+    padding: 5px; /* 내부 요소들과의 간격을 위한 padding 설정 */
+  }
+  #spkp{border: 0.1px solid gray;}
+
+  
     </style>
 </head>
+
 <body>
     <div class="wrap">
-        <div id="header">
-            <div id="head1">1</div>
-            <div id="head2">2</div>
-            <div id="head3">3</div>
+        <div id="header" class="inner-div">
+            <div id="head1"><img src="/02_CSS/실습_v2/image/logo.PNG"></div>
+            <div id="head2">
+                <form action="" id="search_form">
+                    <div id="search_text">
+                        <input type="text" name="keyword">
+
+                    </div>
+                    <div id="search_btn">
+                        <button type="submit">
+                        </button>
+                    </div>
+
+
+                </form>
+            </div>
+            <div id="head3"></div>
         </div>
-        <div id="navigator">
+        <div id="navigator" class="inner-div">
             <ul id="navi">
                 <li><a href="#">교육과정</a></li>
                 <li><a href="#">교육원소개</a></li>
@@ -71,21 +336,58 @@
                 <li><a href="#">상담센터</a></li>
             </ul>
         </div>
-        <div id="body1">
-            <div id="body1_1"></div>
-            <div id="login_form"></div>
+        <div id="body1" class="inner-div">
+            <div id="body1_1" class="">
+                <img src="/02_CSS/실습_v2/image/banner.PNG">
+            </div>
+            <div id="login_form">
+                <form action="" id="login_form_input">
+
+                    <!-- 3_1. id,pwd 텍스트 상자가 들어갈 div -->
+                    <div id="login_input_id_pwd">
+                        <input type="text" name="userId" placeholder="아이디를 입력하세요" required="">
+                        <input type="password" name="userPwd" placeholder="비밀번호를 입력하세요" required="">
+                    </div>
+
+                    <!-- 3_2. 로그인 버튼이 들어갈 div-->
+                    <div id="login_input_btn">
+                        <input type="submit" value="로그인">
+                    </div>
+                </form>
+                <div id="login_form_etc">
+                    <a href="#">아이디</a> |
+                    <a href="#">비빌번호찾기</a> |
+                    <a href="#">회원가입</a>
+                </div>
+            </div>
         </div>
-        <div id="spk">
-            <div id="spk1"></div>
-            <div id="sp1"></div>
-        </div>
-        <div id="body2">
+        <div id="content" class="inner-div">
+            <div id="spkcar" >
+                <div id="spk" ><pre  >  안녕하세요 여기는 공지사항 제목이 들어오는 자리입니다                                  경제 연예 사회 </pre>
+                <div id="car"><img src=" /02_CSS/실습_v2/image/car.PNG" alt=""></div></div>
+            </div>
+            <div id="product">
+                <img src="/02_CSS/실습_v2/image/shopping.PNG" alt="">
+            </div>
+
 
         </div>
-        <div id="footer">
+        <div id="footer" class="inner-div" >
+            <div >
+            <p id="p1">
+                이용약관 | 개인정보 취급방침 | 인재채용 | 고객센터<br><br>
+                강남지원 1관 : 서울특별시 강남구 테헤란로 14길 6 남도 빌딜 2F, 3F, 4F, 5F, 6F <br>
+                강남지원 2관 : 서울특별시 강남구 테헤란로 10길 9 그랑프리 빌딩 4F, 5F, 6F <br>
+                강남지원 3관 : 서울특별시 강남구 테헤란로 130 효산빌딩 5F, 6F <br>
 
+            </p>
+            <p id="p2">
+                Copyright © 1990-2020 KH Information Educational Institute All Right Reserved
+            </p>
         </div>
+        
     </div>
-    
+
 </body>
+
 </html>

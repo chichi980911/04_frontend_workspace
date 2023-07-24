@@ -1,56 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
-    table>*{border: 1px solid black;
+    table>* {
+        border: 1px solid black;
     }
-    #aaa{width: 100px;
-    height: 100px;
-    background-color: black;
+
+    #aaa {
+        width: 100px;
+        height: 100px;
+        background-color: black;
     }
-    #aaa2{width: 100px;
-    height: 100px;
-    background-color: black;
+
+    #aaa2 {
+        width: 100px;
+        height: 100px;
+        background-color: black;
     }
-    #ppp3{width: 200px;
-    height: 100px;}
-    #aaa99{width: 100px;
-    height: 100px;
-    background-color: black;}
+
+    #ppp3 {
+        width: 200px;
+        height: 100px;
+    }
+
+    #aaa99 {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+    }
 </style>
+
 <body>
+    <table border="1px solid bla"></table>
     <h3>행 열 각각 입력받아 테이블 만들기</h3>
     <h4>힌트 : 반복문은 자바랑 같습니다 다만 변수만 var 데이터형</h4>
-    
-    <div id="area1"></div>
-    <button onclick="newtable();">테이블생성</button>
 
-    <table border="1">
-        tr*2>td*4
+    <div id="area1"></div>
+    <button onclick="tablenew();">테이블생성</button>
+    <script>
+        function tablenew() {
+            var row = parseInt(prompt("몇 행 추가?"));
+            var col = parseInt(prompt("몇 열 추가?"));
+
+            var area1 = document.getElementById("area1");
+
+            var table = '<table border="1px solid black"; style ="width:200px; height:200px;">';
+                for(var i = 0; i<row; i++){
+                    table += '<tr>';
+                    for(var j = 0 ; j<col; j++){
+                        table += '<td>';
+                        table += '</td>';
+                    }
+                        table += '</tr>';
+                }
+                        table += '</table>'
+                area1.innerHTML = table
+        }
         
-    </table>
-   
+    </script>
+
+    
+    
+    
+    <br>
+    <hr>
+    <h2>행 열을 각각 입력받아서 새화면 출력하기</h2>
+    <h4>힌트 : document.write()를 이용하여 표를 출력하면 됩니다.</h4>
+    
+    <div id="area88"></div>
+    <button onclick="newtable();">테이블 새 화면 생성</button>
+
+
+
+
+
+
+
 
     <script>
-        function newtable(){
+        function newtable() {
             var col = prompt("몇 행 추 가 ");
             var row = prompt("몇 열 추 가 ");
 
-            document.write('<table border="1">')
-                for(var i = 0; i>row;i++){
-                    document.write('tr*row')
-                    
+            document.write('<table border="1" style="width: 100px; height: 200px;"');
+            let num = 1;
+
+            for(let i =0; i<row; i++){
+                document.write('<tr>');
+                for(let j = 0; j<col; j++){
+                    document.write('<td>');
+                    document.write(num++);
+                    document.write('</td>');
                 }
-
-
-            
-        
-            
-            
+                    document.write('</tr>');
+            }
+                document.write('</table>');
         }
     </script>
 
@@ -58,81 +107,81 @@
     <!-- 02 -->
     <h2>1.색상 선택 후 변경 버튼을 클릭하면 색상이 변경되도록 만들어보시오</h2>
 
-    <div id="aaa" ></div>
+    <div id="aaa"></div>
     <input type="color" id="color2">
     <button onclick="changecolor();">변경</button>
-    
-    <script>
-        function changecolor(){
-        var area2 = document.getElementById("aaa");
-        area2.style.backgroundColor = color2.value;
-        //    var color = document.getElementById("color");
-        //    console.log(color)
 
-        //    area2.innerHTML = styl
-            
+    <script>
+        function changecolor() {
+            var area2 = document.getElementById("aaa");
+            area2.style.backgroundColor = color2.value;
+            //    var color = document.getElementById("color");
+            //    console.log(color)
+
+            //    area2.innerHTML = styl
+
             // area2.innerHTML += "111"
 
             // area2.style.backgroudcolor = color.value;
-        //    if(area2.style.backgroundColor == "black"){
-        //     area2.style.backgroundColor = color
-        //    }
+            //    if(area2.style.backgroundColor == "black"){
+            //     area2.style.backgroundColor = color
+            //    }
         }
-        
+
     </script>
     <hr>
     <h2>2.버튼에 따라 크기 조절이 가능하게 만들기</h2>
-    <div id="aaa2" ></div>
+    <div id="aaa2"></div>
     <button onclick="size1();">50x50</button>
     <button onclick="size2();">원본(100x100)</button>
     <button onclick="size3();">200x200</button>
-<br><br>
-    
+    <br><br>
 
 
-    
-    <div id="aaa99" ></div>
-<button onclick="size9(1);">1.50x50</button>
+
+
+    <div id="aaa99"></div>
+    <button onclick="size9(1);">1.50x50</button>
     <button onclick="size9(2);">2.원본(100x100) </button>
     <button onclick="size9(3);">3.200x200</button>
-    
+
 
     <script>
         //2번
-        function size9(value){
+        function size9(value) {
             var area99 = document.getElementById("aaa99")
 
-            if(value == 1){
+            if (value == 1) {
                 area99.style.width = "50px";
                 area99.style.height = "50px";
 
-            }else if(value ==2){
+            } else if (value == 2) {
                 area99.style.width = "100px";
                 area99.style.height = "100px";
-            }else{
+            } else {
                 area99.style.width = "200px";
                 area99.style.height = "200px";
             }
         }
     </script>
-    
-   
+
+
 
     <script>
         //1번
-        
-        function size1(){
+
+        function size1() {
             var area3 = document.getElementById("aaa2");
             area3.style.width = "50px";
             area3.style.height = "50px";
         }
-        function size2(){
+        function size2() {
             var area3 = document.getElementById("aaa2");
             area3.style.width = "100px";
             area3.style.height = "100px";
 
         }
-        function size3(){
+        function size3() {
             var area3 = document.getElementById("aaa2");
             area3.style.width = "200px";
             area3.style.height = "200px";
@@ -145,39 +194,39 @@
     <hr>
 
 
-    
- 
-<h3>HTML 태그에 접근테스트</h3>
+
+
+    <h3>HTML 태그에 접근테스트</h3>
     <p>단 구매자는 태그 이름으로 접근,상품명은 아이디로 접근,구매가격은 name값으로 접근</p>
     <div id="ppp2">
-    <div>구매자 : <input type="text"></div>
-    <div>상품명 : <input type="text" id="pName"><br></div>
-    <div>구매가격 : <input type="text" name="price"><br></div>
-</div>
+        <div>구매자 : <input type="text"></div>
+        <div>상품명 : <input type="text" id="pName"><br></div>
+        <div>구매가격 : <input type="text" name="price"><br></div>
+    </div>
     <button onclick="pro_btn2();">입력값 출력하기</button>
-    
-    <div  id="ppp3" style="background-color: antiquewhite;"></div>
+
+    <div id="ppp3" style="background-color: antiquewhite;"></div>
 
     <script>
-        function pro_btn2(){
+        function pro_btn2() {
             var area4 = document.getElementById("ppp2");
             var area5 = document.getElementById("ppp3");
-            
+
 
             var pid = document.getElementsByTagName("input");
             console.log(pid);
-            
+
             var pname = document.getElementById("pName");
             console.log(pname);
-           
+
             var price = document.getElementsByName("price");
             console.log(price);
-            
+
             area5.innerHTML = "구입처 : " + pid[1].value + "<br>";
             area5.innerHTML += "구입상품 : " + pname.value + "<br>";
             area5.innerHTML += "구매가격 : " + price[0].value + "<br>";
 
-            
+
 
 
 
@@ -186,7 +235,8 @@
 
 
 
-    
-    
+
+
 </body>
+
 </html>

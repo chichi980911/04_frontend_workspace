@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="area1">
+    <h2>배열 실습문제3</h2>
+      <fieldset>
+        <legend>입력</legend>
+        <input type="text" id="test1"> <button onclick="btn();">입력</button>
+      </fieldset>
+    <input type="text" id="test2" value="">
+  </div>
+
+  <script>
+    function btn() {
+      
+      let test1 = document.getElementById("test1");
+      let test2 = document.getElementById("test2");
+     
+      if(test2.value !== ""){
+        test2.value +=","
+      }
+
+      test2.value += test1.value.trim()
+      test1.value = "";
+
+
+    }
+  </script>
+</body>
+
+</html>

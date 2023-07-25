@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .area{
+            border: 1px solid black;
+            width: 500px;
+            height: 100px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+
+<h3>* 선언적 함수</h3>
+<pre>
+    function 함수명([매개변수,매개변수,...]){
+        해당 함수 호출시 실행할 소스코드;
+
+        [return 결과값;] 
+
+    }
+</pre>
+
+    <div id="area1" class="area"></div>
+    <button onclick="test1();">실행하기</button>
+
+<script>
+    function test1(){
+        //방법1
+        
+        // let area1 = document.getElementById("area1");
+        // area1.innerHTML = '내보내기'
+
+        //방법2
+        document.getElementById("area1").innerHTML = '내보내기' + '<br>'; 
+        document.getElementById("area1").innerHTML += '두번째 내보내기';
+    }
+</script>
+<br>
+<hr>
+
+<h3>* 익명함수 (이름이 없는 함수)</h3>
+<pre>
+    변수|속성 = function(매개변수,매개변수,....){
+        해당 함수 호출시 실행할 소스코드;
+
+        [return 결과값;]
+    }
+    특정 변수나 속성에 대입되는 함수 제시시 주로 사용된다.
+    (주로 이벤트 핸들러(이벤트 발생시 실행할 함수) 작성, 사용)
+</pre>
+
+<div id="area2" class="area"></div>
+<button id="btn1">실행하기</button>
+
+<script>
+    //함수 적용할 요소 불러오기 id 
+    let btn1 = document.getElementById("btn1");
+    //방법1 
+    let area2 = document.getElementById("area2")
+    btn1.onclick = function(){
+    //방법1    
+    area2.innerHTML = '내보내기' + '<br>' + '두번째 내보내기';
+
+    //방법 2
+    // document.getElementById("area2").innerHTML = '내보내기' +'<br>';
+    // document.getElementById("area2").innerHTML += '두번째 내보내기';
+    
+    }
+</script>
+
+
+
+
+
+
+<h2>함수의 매개변수</h2>
+
+
+
+
+<h3>* 매개변수 관련 arguments 배열 </h3>
+<p>
+    함수 호출시 전달되는 값은 내부적으로 arguments 배열에 담김 <br>
+    *arguments :  모든 함수마다 하나씩 존재하는 배열 객체
+</p>

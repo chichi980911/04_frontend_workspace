@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>간이 계산기 만들기</h2>
+    <div id="t1">
+        첫번째 값 : <input type="text"> <br>
+        두번째 값 : <input type="text"> <br>
+        <input type="button" value="+" onclick="test(1);">
+        <input type="button" value="-" onclick="test(2);">
+        <input type="button" value="x" onclick="test(3);">
+        <input type="button" value="/" onclick="test(4);">
+        <input type="button" value="%" onclick="test(5);">
+
+        <div>계산결과 : </div>
+        <div id="area1"></div>
+    </div>
+    <script>
+        let area1 = document.getElementById("area1")
+        let num = document.getElementsByTagName("input")
+
+
+
+        function test(value) {
+            switch (value) {
+                case 1:
+                    area1.innerHTML = parseInt(num[0].value) + parseInt(num[1].value) //number 사용 불가?
+                    break;
+                case 2:
+                    area1.innerHTML = parseInt(num[0].value) - parseInt(num[1].value)
+                    break;
+                case 3:
+                    area1.innerHTML = parseInt(num[0].value) * parseInt(num[1].value)
+                    break;
+                case 4:
+                    area1.innerHTML = parseInt(num[0].value) / parseInt(num[1].value)
+                    break;
+                case 5:
+                    area1.innerHTML = parseInt(num[0].value) % parseInt(num[1].value)
+                    break;
+            }
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

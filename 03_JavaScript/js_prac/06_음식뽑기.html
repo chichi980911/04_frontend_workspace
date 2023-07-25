@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>배열 실습 문제1</h2>
+    <div>
+        <form action="testdo">
+            <fieldset>
+                <legend>보기</legend>
+                사과,바나나,당근 <br>
+                김밥,치즈,떡볶이,햄버거<br>
+                환타,사이다,콜라<br>
+                고양이,강아지
+            </fieldset>
+        </form>
+    </div>
+    
+    <input type="text"><br>
+    <button onclick="btn();">전송 및 처리</button>
+    
+    <script>
+        function btn() {
+            //배열에 담기
+            const arr = ["사과", "바나나", "당근", "김밥", "치즈", "떡볶이", "햄버거", "환타", "사이다", "콜라", "고양이", "강아지"]
+            //태그명으로 가져오기
+            let input = document.getElementsByTagName("input");
+            //indexOf 기본 제공하는 메서드 배열과 문자열 둘 다 사용 indexOf('문자열')
+            //문자열이 위치하는 인덱스 값 반환 
+            let index = arr.indexOf(input[0].value);
+            // console.log(index)
+            
+            //배열.includes(특정요소나 문자열 포함여부) = 반환boolean타입 
+            if (arr.includes(input[0].value)) {
+                alert(input[0].value + "는 배열 index" + index + "번째에 존재합니다.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

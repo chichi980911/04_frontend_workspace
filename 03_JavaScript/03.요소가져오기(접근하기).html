@@ -16,8 +16,10 @@
     <h1>HTML 요소에 접근하기(해당 요소객체 가져오기)</h1>
 
     <h3>1) 아이디를 이용해서 요소 가져오기</h3>
+    
     <div id="area1" class="area"></div>
     <button onclick="accessId();">아이디로 접근</button>
+    
     <script>
         //아이디로 요소 가져오기
         //document.getElementById("아이디명"); => 선택된 요소객체 반환
@@ -26,7 +28,7 @@
            var area1 = document.getElementById("area1");
 
            //선택한 요소의 속성값 가져온다거나 변경가능
-           //속성에 접근하고자 할 때  => 선택된요소,접근하고자하는속성
+           //속성에 접근하고자 할 때  => 선택된요소.접근하고자하는속성
            area1.innerHTML += "아이디로 접근 성공! <br>"; //연이어서 출력가능하다
             
            //선택된 요소의 스타일 변경

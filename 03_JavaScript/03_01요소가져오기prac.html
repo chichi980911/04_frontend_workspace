@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test1">테스트입니다.</div>
+    <div class="test2">
+        <h4>안녕하세요</h4>
+        <h4>반갑습니다.</h4>
+    </div>
+
+    <button onclick="btn();">확인버튼</button>
+
+    <script>
+        function btn(){
+            let div1 = document.querySelector("#test1"); 
+            // 첫번째 div에 접근
+            let div2 = document.querySelectorAll(".test2>h4"); 
+            //두번째 div를 이용해 h4 모두 접근 h4는 
+        
+            div1.innerHTML = '테스트라구요?';
+            div2[0].innerHTML = '환영 인사입니다.';
+            div2[1].innerHTML = '정식 인사입니다.';
+        
+        }
+    </script>
+    
+
+</body>
+</html>

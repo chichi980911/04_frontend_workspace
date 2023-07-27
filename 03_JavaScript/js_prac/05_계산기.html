@@ -28,9 +28,16 @@
 
 
         function test(value) {
+            
             switch (value) {
                 case 1:
-                    area1.innerHTML = parseInt(num[0].value) + parseInt(num[1].value) //number 사용 불가?
+                    area1.innerHTML = parseInt(num[0].value) + parseInt(num[1].value) 
+                    //number 사용 불가
+
+                    //2023-07-27 답 Number를 number로 사용하고 안된다고 하고 있네 ㅋㅋ
+
+                    // area1.innerHTML = num[0].value + num[1].value =105
+                    // area1.innerHTML = Number(num[0].value) + Number(num[1].value)
                     break;
                 case 2:
                     area1.innerHTML = parseInt(num[0].value) - parseInt(num[1].value)

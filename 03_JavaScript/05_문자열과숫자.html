@@ -123,8 +123,8 @@
 
                 const area4 = document.querySelector("#area4")
                 area4.innerHTML = "test6 : " + test6 + "<br>";
-                area4.innerHTML += "test6 : " + test7 + "<br>";
-                area4.innerHTML += "test6 : " + test8 + "<br>";
+                area4.innerHTML += "test7 : " + test7 + "<br>";
+                area4.innerHTML += "test8 : " + test8 + "<br>";
 
                 //덧셈연산시에는 자동 형변환 되지 않고 연이어서 한 문자열로 됨
 
@@ -149,6 +149,11 @@
                 const test14 = 2 + Number("1.234"); //3.234
                 const test15 = 2 + parseInt("1.234"); //  정수변환 1반환 
                 const test16 = 2 + parseFloat("1.234");
+
+                area4.innerHTML += "test13 : " + test13 + "<br>";
+                area4.innerHTML += "test14 : " + test14 + "<br>";
+                area4.innerHTML += "test15 : " + test15 + "<br>";
+
 
                 area4.innerHTML += "test6 : " + test14 + "<br>";
                 area4.innerHTML += "test6 : " + test15 + "<br>";
@@ -177,6 +182,8 @@
                 
                 const sum = Number(num1) + Number(num2);
                 document.getElementById("result").innerHTML = "결과 : " + sum;
+
+
             }
         </script>
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .area{
+      border: 1px solid black;
+      background-color: lightgray;
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+  
+</head>
+<body>
+  <div id="area1" class="area"></div>
+  <button onclick="test1();">결과</button>
+
+  <script>
+    function test1(){
+      let area1 = document.getElementById("area1");
+      let str = "stream"
+
+      area1.innerHTML += 'str.toUpperCase() : ' + str.toUpperCase()+ "<br>"
+      area1.innerHTML += 'str.toLowerCase() : ' + str.toLowerCase()+ "<br>"
+      area1.innerHTML += 'str(stream).length : ' + str.length + "<br>"
+      area1.innerHTML += 'str(stream).charAt(i)  : ' + str.charAt(3)+"<br>"
+      area1.innerHTML += 'str(stream).indexOf("문자")  : ' + str.indexOf("e")+"<br>"
+      area1.innerHTML += 'str(stream).lastIndexOf("문자")  : ' + str.lastIndexOf("s")+"<br>"
+      area1.innerHTML += 'str(stream).substring(시작인덱스,끝인덱스)  : ' + str.substring(1,4)+"<br>"
+
+
+
+    }
+  </script>
+</body>
+</html>

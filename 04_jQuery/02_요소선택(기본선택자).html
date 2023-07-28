@@ -50,16 +50,76 @@
       //순수 자바스크립트 
       console.log(document.getElementsByTagName('p'))
       const p  = document.getElementsByTagName('p')
-      for(let i =0; i<p.length; i++){
-        p[i].style.color = "pink"
-      }
+      // for(let i =0; i<p.length; i++){
+      //   p[i].style.color = "pink"
+      // }
 
 
       //제이쿼리
       console.log($("p"))
       // h5=$("#ele").prop("tagName").css("backgroundColor","red")
 
+      $("h5").css("color","blue")
+
+      //여러종류의 요소들 선택 
+      $("p , h5 , #id1").css("backgroundColor","yellow")
+
     })
   </script>
+
+  <hr>
+
+  <h3>* 클래스 선택자</h3>
+  <p>특정한 클래스 속성을 가진 요소를 선택하고자 할 때 사용</p>
+
+  <h1 class="item">Class1</h1>
+  <h1 class="item select">Class2</h1>
+  <h1 class="item select">Class3</h1>
+
+
+  <script>
+  $(Document).ready(function(){
+    //순수 자바스크립트 방식 doucument.getElementsByClassName("클래스명") : 배열
+    const item = document.getElementsByClassName("item")
+    console.log(item)
+    // for(let i in item){
+    //   item[i].style.color = "orange"
+    //   item[i].onclick = function(){
+    //     console.log("클릭댐")
+    //   }
+    // }
+
+    //제이쿼리방식
+    $(".select").css("backgroundColor","pink")
+    $(".select").click(function(){
+      alert("클릭됨")
+    })
+    //click() : 클릭이벤트와 관련된 기능 수행하는 메서드
+  })
+
+  </script>
+
+  <!-- 
+  * 요소 선택하는 방법
+                   순수 자바스크립트 방식    |    jQuery방식
+=====================================================================================
+        document.getElementById("아이디명") |    $("#아이디명")
+document.getElementsByClassName("클래스명") |    $(".클래스명") 
+    document.getElementsByTagName("태그명") |    $("태그명")
+
+    *선택된 요소에 속성값 변경하고자 할 때 
+    
+                  순수자바스크립트방식             |    jQuery방식
+=====================================================================================
+      |선택된 요소객체에 직접속성에 접근해서         | 선택된 요소의 메서드 이용 
+=====================================================================================
+스타일| .style.스타일속성 = "변경할 값";            | .css("스타일속성", "변경할 값");
+내용  |   .innerHTML = "변경할 값";                | .html("변경할 값")
+이벤트|   .on이벤트명 = fubction(){};              | .이벤트명(funtion(){})
+
+
+   -->
+ 
+
 </body>
 </html>

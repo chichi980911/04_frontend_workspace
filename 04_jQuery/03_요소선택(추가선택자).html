@@ -64,7 +64,7 @@
         <input type="text"><br>
         <input type="number" class="test test1"><br>
         <input type="radio"><br>
-        <input type="checkbox"><br>
+        <!-- <input type="checkbox"><br> -->
         <input type="button" value="button" class="test2">
         
         <script>
@@ -77,9 +77,9 @@
                 $("input[class~=test]").val("1234");
                 //단어로써 포함하기 때문에 버튼은 제외
 
-                $("input[type^=ra]").attr("checked",true)
+                // $("input[type^=ra]").attr("checked",true)
 
-                $("input[type$=box]").attr("checked",true)
+                // $("input[type$=box]").attr("checked",true)
 
                 // $("input[class*=st2]").css({width:"100px" , height : "100px" })
 
@@ -98,7 +98,7 @@
 
     텍스트상자 : <input type="text"> <br>
     일반상자 : <input type="button"> <br>
-    체크박스 : <input type="checkbox"> <br>
+    <!-- 체크박스 : <input type="checkbox"> <br> -->
     첨부파일 : <input type="file"> <br>
     비밀번호 : <input type="password"> <br>
     라디오 : <input type="radio"> <br>
@@ -112,7 +112,7 @@
 
             $(":button").css({width : "100px" , height : "100px"}).val("왕버튼")
 
-            $(":checkbox").attr("checked",false);
+            // $(":checkbox").attr("checked",false);
 
             //첨부파일 : 배경색 연두
             $(":file").css("backgroundColor","lightgreen")
@@ -121,7 +121,7 @@
             $(":password").css("backgroundColor","yellow")
             
             //라디오 : 체크상태 풀고 가로,세로50px
-            $(":radio").attr("checked",false).css({width:"50px", height : "50px"})
+            // $(":radio").attr("checked",false).css({width:"50px", height : "50px"})
             
             //초기화버튼 : 배경 파랑 글자색 흰 테두리없애기 문구 취소로 변경
             $(":reset").css({backgroundColor :"blue",
@@ -136,26 +136,123 @@
                 alert($(":text").val()); //여러개가 있는 경우 첫번째 요소의 밸류값을 가져온다.
                 alert($(":text").eq(1).val()); //타입이 여러개인경우 eq(i)로 선택가능하다.
             })
-            //mouseenter :선택된 요소의 경계 내부로 마우스가 들어가는 순간 발생하는 이벤트
-            $(":submit").mouseenter(function(){
-                // alert("!!")
-                // $(this).css("backgroundColor","purple")
+
+            // HOVER 2가지로 나누기 
+           
+            // //mouseenter :선택된 요소의 경계 내부로 마우스가 들어가는 순간 발생하는 이벤트
+            // $(":submit").mouseenter(function(){
+            //     // alert("!!")
+            //     // $(this).css("backgroundColor","purple")
+            //     $(this).addClass("test11");
+            //     //addClass : 선택된 요소의 클래스를 클래스를 제거해주는메서드
+
+
+
+            // })
+
+            // //mouseout : 선택된 요소의 경계외부로 마우스가 나갈 때 발생하는 이벤트
+            // $(":submit").mouseout(function(){
+            //     // $(this).css("backgroundColor", "");
+            //     $(this).removeClass("test11"); 
+            //     //removerClass : 선택된 요소의 클래스를 클래스를 제거해주는메서드
+            // })
+
+            //mouseenter + mouseout = hover
+            $(":submit").hover(function(){
                 $(this).addClass("test11");
-                //addClass : 선택된 요소의 클래스를 클래스를 제거해주는메서드
-
-
-
-            })
-
-            //mouseout : 선택된 요소의 경계외부로 마우스가 나갈 때 발생하는 이벤트
-            $(":submit").mouseout(function(){
-                // $(this).css("backgroundColor", "");
-                $(this).removeClass("test11"); 
-                //removerClass : 선택된 요소의 클래스를 클래스를 제거해주는메서드
+            }, function(){
+                $(this).removeClass("test11")
             })
             
+            //$(":submit")
         })
      </script>
+
+     <hr>
+
+     <h3>*상태(checked, selected ,disable,enabled)선택자</h3>
+
+     <h4>*checked 상대 선택자 (radio , checkbox) </h4>
+
+     취미:
+     <input type="checkbox" name="hobby" value="game">게임
+     <input type="checkbox" name="hobby" value="movie">영화
+     <input type="checkbox" name="hobby" value="music">음악
+
+     <button type="button" id="btn">실행확인</button>
+     <!-- 버튼타입 미지정시 submit 기본값  -->
+
+     <script>
+        $(function(){
+            //버튼 클릭시 현재 checked 상태인 요소 선택해서 스타일 부여
+        //     $('#btn').click(function(){
+        //         $(':checked').css({width: "50px", height: "50px"})
+        //         //체크 해제해도 크기가 원상복구가 안된다.
+        //     })
+
+            //checkbox 인 요소들에 change 이벤트 발생시
+            $(':checkbox').change(function(){
+                // console.log('change 발생')
+                // .prop : 내가 제시한 속성값 리턴함
+                // console.log($(this).prop("checked"));
+                if($(this).prop('checked')){//체크된 상황
+                    $(this).css({width:"50px", height:"50px"})
+                }else{//체크해제된 상황
+                    $(this).css({width:"", height:""})
+
+
+                }
+            })
+        })
+     </script>
+     <h4>selected 상태 선택자 (select > option) </h4>
+     국적 :
+     <select name="national" id="">
+        <option value="x">선택안함</option>
+        <option value="ko">한국</option>
+        <option value="us">미국</option>
+        <option value="eu">영국</option>
+
+    </select>
+    
+    <button type="button" onclick="test();">확인</button>
+    <br>
+
+    선택한 나라 : <span id="result">선택안함</span>
+
+    <script>
+        function test(){
+            $(function(){
+
+                // 현재 선택됨 (selected 상태) option 요소 가져오기
+                console.log($('option:selected').val());
+                console.log($('option:selected').html());
+
+                //$('#result').html(값);
+                $('#result').html($('option:selected').html()) //또는 .val()
+
+            })
+        }
+    </script>
+
+    <hr>
+    <h4>- disableed, enabled 상태 선택자(input 요소들, button 등)</h4>
+
+    <button type="button">활성화 버튼 </button>
+    <button type="button" disabled>비활성화 버튼</button>
+
+    <script>
+
+        $(function(){
+            $("button:enabled").css("backgroundColor" , "yellowgreen")
+            $("button:enavled").css("backgroundColor", "orangered")
+        
+        })
+
+    </script>
+
+
+
 
 
 

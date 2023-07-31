@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="resources/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <h1>요소 생성 및 제거</h1>
+    <h3>*동적으로 요소 생성</h3>
+    <button id="btn">요소생성</button>
+    <div id="area1"></div>
+    
+    <script>
+    $(function(){
+        //<p>태그
+            //1.문자열로 만드는 방법
+            let el1 = "<p> Create Element By Text </p>"
+            
+            //2.DOM 메서드로 만드는 방법 (createElement, createTextNode
+            let el2 = document.createElement("p"); // <p></p>
+            let text = document.createTextNode("Create Element by DOM")
+
+            el2.appendChild(text);
+
+            //3,j쿼리로 만드는 방법
+            let el3 = $("<p></p>").text("crreate Element By jQuery")
+            
+            console.log(el1)
+            console.log(el2)
+            console.log(el3)
+
+            $("#area1").append(el1,el2,el3);
+
+
+
+    })
+    </script>
+</body>
+</html>

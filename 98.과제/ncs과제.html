@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="C:\04_frontend_workspace\04_jQuery\resources\js"></script>
+</head>
+<style>
+    input{border-left: none;
+        border-right: none;
+        border-top: none;}
+</style>
+<body>
+    <div class="area1">
+        <div class="area2">
+            아이디 <input type="id" id="id">
+            <p ></p>
+            패스워드<input type="password" id="password">
+            <p id="alertPwd"></p>
+            패스워드 확인 <input type="password" id="password2">
+            <p></p>
+            이메일 <input type="email" id="email">
+            <p></p>
+            주소 <input type="text" id="address">
+            <p></p>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            document.getElementById("password").addEventListener('click', function(){
+                document.getElementById("alertPwd").innerText('영문자 대/소문자 특수문자,숫자 포함8~32자')
+            })
+            
+        })
+        // $(function(){
+
+        //     let password = $("<p></p>").text("영문자 대/소문자 특수문자,숫자 포함8~32자")
+        //     $("#password").append(password);
+
+
+
+        //     // $("#password").click(function(){
+        //     // $("#text1").text("영문자 대/소문자 특수문자,숫자 포함8~32자")
+        //     // })
+        // })
+        
+    </script>
+</body>
+</html>

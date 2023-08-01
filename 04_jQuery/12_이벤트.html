@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="resources/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <h3>*방법1 이벤트 메서드를 통한 연결</h3>
+    <pre>
+        $("선택자").이벤트 메서드(funtion){
+            선택자에 해당 이벤트 발생시 실행할 내용;
+        })
+    </pre>
+
+
+    <h3>* 방법2. on 메서드를 이용한 방법</h3>
+
+    <pre>
+        $("선택자").on("이벤트명",function(){
+            해당 선택지에 이벤트 발생시 실행할 내용;
+        })
+    </pre>
+
+    <h4 id="tes2">마우스 클릭 및 올려보세요</h4>
+
+    <script>
+        $(function () {
+
+            // $("#test2").on("mouseenter", function () {
+
+            // })
+
+            // $("#test2").on("mouseenter", function () {
+
+            // })
+
+            //on 메서드를 통해 이벤트 연결시 
+            //한요소에 다중으로 이벤트 걸기 가능
+            $("#test2").on({
+                "mouseenter": function () { 
+                    $(this).css("backgroundColor","yellowgreen").text("마우스 올라감")
+                },
+                "mouseout": function () {
+                    $(this).css("backgroundColor","yellow").text("마우스 내려감")
+                 },
+                "click": function () { 
+                    //기존에 잘 수행되던 mouseenter,mouseout 이벤트 핸들러 제거
+                    //*off메서드 : 이벤트 핸들러 제거 후 해당 요소 반환
+                    $(this).off("mouseenter").off("mouseout").css("backgroundColor","orange").text("이벤트 제거됨")
+                }
+            });
+
+
+        })
+    </script>
+</body>
+
+</html>

@@ -195,7 +195,7 @@
 <h3>test5</h3>
 <h3 class="test">test6</h3>
 
-<script>
+<!-- <script>
 $(function(){
   //현재 이 문서상에 존재하는 모든 h3 요소에 순차적으로 접근하면서
   $("h3").each(function(){
@@ -204,6 +204,17 @@ $(function(){
     }
     })
 
+
+</script> -->
+
+<script>
+  $(function(){
+    $("h3").each(function(){
+      if($(this).is(".test")){
+        $(this).css("backgroundColor","lightblue")
+      }
+    })
+  })  
 </script>
 
 
